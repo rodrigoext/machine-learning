@@ -19,6 +19,7 @@ class Perceptron(object):
                 errors += int(update != 0.0)
             self.errors_.append(errors)
         return self
+        
     def net_input(self, X):
         return np.dot(X, self.w_[1:]) + self.w_[0]
 
