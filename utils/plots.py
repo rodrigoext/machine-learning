@@ -1,3 +1,7 @@
+import numpy as np
+from matplotlib.colors import ListedColormap
+import matplotlib.pyplot as plt
+
 def plot_decision_regions(X, y, classifier, resolution=0.02):
     # setup marker generator and color map
     markers = ('s', 'x', 'o', '^', 'v')

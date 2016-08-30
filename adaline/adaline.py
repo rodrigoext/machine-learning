@@ -1,7 +1,10 @@
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
-import utils.utils
+import sys
+sys.path.append("../utils")
+from plots import plot_decision_regions
 
 df = pd.read_csv('../data_sets/iris.data', header=None)
 df.tail()
@@ -59,7 +62,7 @@ def main():
 
     ada = AdalineGD(n_iter=15, eta=0.01)
     ada.fit(X_std, y)
-    utils.utils.plot_decision_regions(X_std, y, classifier=ada)
+    plot_decision_regions(X_std, y, classifier=ada)
     plt.title('Adaline - Gradient Descent')
     plt.xlabel('sepal length [standardized]')
     plt.ylabel('petal length [standardized]')
