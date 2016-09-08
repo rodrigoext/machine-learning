@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 
+df = read_csv('../data_sets/housing.data', header=None, sep='\s+')
+
 class LinerRegressionGD(object):
     def __init__(self, eta=0.001, n_iter=20)
         self.eta = eta
@@ -25,3 +27,9 @@ class LinerRegressionGD(object):
 
     def predict(self, X):
         return self.net_input(X)
+
+def main():
+    
+
+if __name__ == "__main__":
+    main()
